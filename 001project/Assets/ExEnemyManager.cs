@@ -6,17 +6,16 @@ using System.Linq;
 public class ExEnemyManager : MonoBehaviour
 {
     public List<ExEnemy> enemies = new List<ExEnemy>();
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        //데미지가 낮은 순서대로 적 캐릭터 정렬
+        //데이지가 낮은 순서대로 적 캐릭터 정렬
         var sortedEnemies = enemies.OrderBy(enemy => enemy.damage);
-
 
         foreach (var enemy in sortedEnemies)
         {
-            Debug.Log(enemy"Sorted Enemy : " + enemy.gameObject.name + "Damage : " + enemy.damage);
+            Debug.Log("Sorted Enemy : " + enemy.gameObject.name + " Damage : " + enemy.damage);
         }
 
         //특정 거리 이내의 적 캐릭터 선택
@@ -32,6 +31,6 @@ public class ExEnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
