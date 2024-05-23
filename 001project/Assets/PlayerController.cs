@@ -38,7 +38,28 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, range);
+            foreach(Collider collider in colliders)
+            {
+                if(collider.CompareTag("NPC"))
+                {
+                    Entity_dialog.Param npcParam =
+                        npcManager.GetParamData(collider.GetComponent<NPCActor>().npcNumber, gameStateManager.gameState);
 
+                    if(npcParam != null)
+                    {
+                        Debug.Log($"Dialog : {npcParam.Dialog}");
+
+                        if(npcParam.changeState > 0)
+                        {
+                            gameStateManager.gameState = npcParam.changeState;
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning("해당하는데이터가없습니다");
+                    }
+                }
+            }
         }
     }
 }
