@@ -69,7 +69,7 @@ public class ExEncrypt : MonoBehaviour
     PlayerData LoadData()
     {
         if (File.Exists(filePath))
-        {           
+        {
             //파일에서 암호화된 데이터 읽기
             string encryptedData = File.ReadAllText(filePath);
 
@@ -94,7 +94,7 @@ public class ExEncrypt : MonoBehaviour
 
     byte[] Encrypt(byte[] plainBytes)
     {
-        using (Aes aesAlg = Aes.Create()) 
+        using (Aes aesAlg = Aes.Create())
         {
             aesAlg.Key = Encoding.UTF8.GetBytes(key);
             aesAlg.IV = new byte[16];   //IV (intialization Vector) 랜덤값을 사용하거나 고정값을 설정
@@ -107,7 +107,7 @@ public class ExEncrypt : MonoBehaviour
             {
 
                 //스트림에 암호화 변환기를 연결하여 암호화 스트림을 생성 
-                using(CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                 {
                     //암호화 스트림에 데이터 쓰기
                     csEncrypt.Write(plainBytes, 0, plainBytes.Length);

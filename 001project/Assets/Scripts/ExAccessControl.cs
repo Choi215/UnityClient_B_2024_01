@@ -19,12 +19,12 @@ public class ExAccessControl : MonoBehaviour
     //Start 함수는 Unity가 호출하는 메서드이므로 public으로 선언 해야 함 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

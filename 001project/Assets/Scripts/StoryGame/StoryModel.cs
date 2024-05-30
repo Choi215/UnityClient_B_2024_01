@@ -58,7 +58,7 @@ public class StoryModel : ScriptableObject
 
     [System.Serializable]
     public class Result
-    {      
+    {
         public enum ResultType : int
         {
             ChangeHp,
@@ -70,7 +70,7 @@ public class StoryModel : ScriptableObject
             GoToRandomStory,
             GoToEnding
         }
-        
+
         public ResultType resultType;
         public int value;
         public Stats stats;

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Entity_monster : ScriptableObject
+public class Entity_dialog : ScriptableObject
 {
 	public List<Sheet> sheets = new List<Sheet>();
 
@@ -18,8 +18,9 @@ public class Entity_monster : ScriptableObject
 	{
 
 		public int index;
-		public int hp;
-		public int mp;
-		public string name;
+		public int npc;
+		public int gamestate;
+		public string Dialog;
+		public int changeState;
 	}
 }

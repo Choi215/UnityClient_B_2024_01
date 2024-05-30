@@ -37,10 +37,10 @@ public class ExJsonData : MonoBehaviour
 
             Debug.Log(playerData.playerName);
             Debug.Log(playerData.playerLevel);
-            for(int i = 0; i < playerData.items.Count; i++)
+            for (int i = 0; i < playerData.items.Count; i++)
             {
                 Debug.Log(playerData.items[i]);
-            }          
+            }
         }
     }
     void SaveData(PlayerData data)
@@ -53,7 +53,7 @@ public class ExJsonData : MonoBehaviour
 
     PlayerData LoadData()
     {
-        if(File.Exists(filePath)) 
+        if (File.Exists(filePath))
         {
             //파일에서 데이터 읽기
             string jsonData = File.ReadAllText(filePath);

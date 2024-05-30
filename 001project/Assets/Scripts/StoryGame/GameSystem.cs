@@ -20,7 +20,7 @@ namespace STROYGAME
 
             GameSystem gameSystem = (GameSystem)target;
 
-            if(GUILayout.Button("Reset Story Models"))
+            if (GUILayout.Button("Reset Story Models"))
             {
                 gameSystem.ResetStoryModels();
             }
@@ -52,7 +52,7 @@ namespace STROYGAME
         {
             currentState = temp;
 
-            if(currentState == GAMESTATE.STORYSHOW)
+            if (currentState == GAMESTATE.STORYSHOW)
             {
                 StoryShow(currentStoryIndex);
             }
@@ -62,13 +62,13 @@ namespace STROYGAME
         {
             StoryModel tempStroyModels = FindStoryModel(number);
 
-            //StorySystem.Instance.currentStoryModel = tempStroyModels;
-            //StorySystem.instance.CoShowText();
+            StorySystem.instance.currentStoryModel = tempStroyModels;
+            StorySystem.instance.CoShowText();
         }
 
         public void ApplyChoice(StoryModel.Result result)           //스토리 선택시 결과
         {
-            switch(result.resultType)
+            switch (result.resultType)
             {
                 case StoryModel.Result.ResultType.ChangeHp:
 
@@ -118,7 +118,7 @@ namespace STROYGAME
 
             List<StoryModel> StoryModelList = new List<StoryModel>();
 
-            for(int i = 0; i < storyModels.Length; i++)                     //MAIN 스토리들만 가져와서 List에 넣는다. 
+            for (int i = 0; i < storyModels.Length; i++)                     //MAIN 스토리들만 가져와서 List에 넣는다. 
             {
                 if (storyModels[i].storyType == StoryModel.STORYTYPE.MAIN)
                 {
@@ -126,7 +126,7 @@ namespace STROYGAME
                 }
             }
 
-            tempStoryModels = StoryModelList[Random.Range(0,StoryModelList.Count)]; //MAIN 들만 있는 리스트에서 랜덤으로 스토리 진행
+            tempStoryModels = StoryModelList[Random.Range(0, StoryModelList.Count)]; //MAIN 들만 있는 리스트에서 랜덤으로 스토리 진행
             currentStoryIndex = tempStoryModels.storyNumber;
             Debug.Log("currentStoryIndex" + currentStoryIndex);
 
@@ -137,7 +137,7 @@ namespace STROYGAME
         {
             StoryModel tempStoryModels = null;
 
-            for(int i = 0; i < storyModels.Length; i++)
+            for (int i = 0; i < storyModels.Length; i++)
             {
                 if (storyModels[i].storyNumber == number)
                 {

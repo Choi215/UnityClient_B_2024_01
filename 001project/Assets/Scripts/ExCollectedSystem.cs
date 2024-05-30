@@ -11,7 +11,7 @@ public class ExItem
 public class ExCollectedSystem : MonoBehaviour
 {
     public List<ExItem> collectedItem = new List<ExItem>();     //컬랙팅 할 리스트 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class ExCollectedSystem : MonoBehaviour
 
     void CheckAllItemsCollected()
     {
-        if(collectedItem.All(item => item.IsCollected)) //모든 아이템이 수집 되었는지 검사
+        if (collectedItem.All(item => item.IsCollected)) //모든 아이템이 수집 되었는지 검사
         {
             Debug.Log("All items collected");
         }

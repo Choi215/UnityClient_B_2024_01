@@ -8,7 +8,7 @@ public class ExGetData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach(Entity_monster.Param param in monster.sheets[0].list)
+        foreach (Entity_monster.Param param in monster.sheets[0].list)
         {
             Debug.Log(param.index + " - " + param.name + " - " + param.hp + " - " + param.mp);
         }
@@ -17,6 +17,6 @@ public class ExGetData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -8,6 +8,6 @@ public class ExCharacterDifferent : ExCharacter
     {
         base.Move();
         transform.Translate(
-            Vector3.up * speed  * Time.deltaTime);
+            Vector3.up * speed * Time.deltaTime);
     }
 }

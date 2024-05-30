@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExConstructor : MonoBehaviour          //생성자 예제
 {
     private int value;          //사용할 변수 설정 
-   
+
     //생성자
     public ExConstructor(int _value)
     {
@@ -21,7 +21,7 @@ public class ExConstructor : MonoBehaviour          //생성자 예제
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) //스페이스키를 눌렀을때 이 객체 파괴
+        if (Input.GetKeyDown(KeyCode.Space)) //스페이스키를 눌렀을때 이 객체 파괴
         {
             Destroy(this.gameObject);
         }

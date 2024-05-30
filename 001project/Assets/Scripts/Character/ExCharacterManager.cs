@@ -10,9 +10,9 @@ public class ExCharacterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            for(int i = 0; i < exCharacterList.Count; i++)
+            for (int i = 0; i < exCharacterList.Count; i++)
             {
                 exCharacterList[i].DestroyChatacter();
             }
