@@ -3,23 +3,22 @@
 //using UnityEngine;
 //using System.Linq;
 
-//public class ExEnemyManager : MonoBehaviour
-//{
-//    public List<ExEnemy> enemies = new List<ExEnemy>();
-    
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-//        //µ¥¹ÌÁö°¡ ³·Àº ¼ø¼­´ë·Î Àû Ä³¸¯ÅÍ Á¤·Ä
-//        var sortedEnemies = enemies.OrderBy(enemy => enemy.damage);
+public class ExEnemyManager : MonoBehaviour
+{
+    public List<ExEnemy> enemies = new List<ExEnemy>();
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        var sortedEnemies = enemies.OrderBy(enemy => enemy.damage);
 
-//        foreach (var enemy in sortedEnemies)
-//        {
-//            Debug.Log(enemy"Sorted Enemy : " + enemy.gameObject.name + "Damage : " + enemy.damage);
-//        }
+        foreach (var enemy in sortedEnemies)
+        {
+            Debug.Log("Sorted Enemy : " + enemy.gameObject.name + " Damage : " + enemy.damage);
+        }
 
-//        //Æ¯Á¤ °Å¸® ÀÌ³»ÀÇ Àû Ä³¸¯ÅÍ ¼±ÅÃ
+//        //Æ¯ï¿½ï¿½ ï¿½Å¸ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //        float maxDistance = 10f;
 //        var closeEnemies = enemies.Where(enemy => Vector3.Distance(enemy.transform.position, transform.position) < maxDistance);
 
@@ -29,9 +28,9 @@
 //        }
 //    }
 
-//    // Update is called once per frame
-//    void Update()
-//    {
-        
-//    }
-//}
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}

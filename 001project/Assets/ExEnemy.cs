@@ -2,17 +2,26 @@
 //using System.Collections.Generic;
 //using UnityEngine;
 
-//public class ExEnemy : MonoBehaviour
-//{
-//    //ÀûÀÌ ÇÃ·¹ÀÌ¾î ÇÑÅÂ ÁÖ´Â ÇÇÇØ·®
-//    public int damage = 20;
-//    public ExPlayer targetPlayer;   //Å¸°Ù ÇÃ·¹ÀÌ¾î
+public class ExEnemy : MonoBehaviour
+{
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î¿¡ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½Ø·ï¿½
+    public int damage = 20;
+    public ExPlayer targetPlayer;         //Å¸ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½
 
-//    //ÇÃ·¹ÀÌ¾î¿¡°Ô ÇÇÇØ¸¦ ÁÙ ¶§
-//    public void AttackPlayer(ExPlayer player)
-//    {
-//        //ÇÃ·¹ÀÌ¾î¿¡°Ô ÇÇÇØ¸¦ ÁØ´Ù
-//        Player.TakeDamage(damage);
-//        Debug.Log("ÇÃ·¹ÀÌ¾î °ø°Ý");
-//    }
-//}
+    //ï¿½Ã·ï¿½ï¿½Ì¾î¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½Ç´ï¿½ ï¿½Ô¼ï¿½
+    public void AttackPlayer(ExPlayer player)
+    {
+        //ï¿½Ã·ï¿½ï¿½Ì¾î¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½Ø´ï¿½.
+        player.TakeDamage(damage);
+        Debug.Log("ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½.");
+
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            AttackPlayer(targetPlayer);
+        }
+    }
+}
