@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class ExPlayerPefabsData : MonoBehaviour
 {
-    public int scorePoint;
+    public int scorePoint; 
     void SaveData(int score)
     {
-        PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.SetInt("Score" , score);
         PlayerPrefs.Save();
     }
     int LoadData()
     {
         return PlayerPrefs.GetInt("Score");
     }
-    void Update()
+    void Update() 
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.S))
         {
             SaveData(scorePoint);
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if(Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log("Score : " + LoadData());
         }

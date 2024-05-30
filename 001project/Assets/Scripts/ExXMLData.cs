@@ -24,7 +24,7 @@ public class ExXMLData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.S))
         {
             PlayerData playerData = new PlayerData();
             playerData.playerName = "플레이어 1";
@@ -52,13 +52,13 @@ public class ExXMLData : MonoBehaviour
         XmlSerializer serializer = new XmlSerializer(typeof(PlayerData));
         FileStream steam = new FileStream(filePath, FileMode.Create);   //파일스트림 함수로 파일 생성 
         serializer.Serialize(steam, data);                              //클래스 -> XML 변환 후 저장
-        steam.Close();
+        steam.Close(); 
     }
     PlayerData LoadData()
     {
-        if (File.Exists(filePath))
+        if(File.Exists(filePath)) 
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(PlayerData));
+            XmlSerializer serializer= new XmlSerializer(typeof(PlayerData));
             FileStream steam = new FileStream(filePath, FileMode.Open); //파일 읽기모드로 파일 열기
             PlayerData data = (PlayerData)serializer.Deserialize(steam);    //XML -> 클래스 읽어서 변환 
             steam.Close();

@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Entity_monster : ScriptableObject
-{
-	public List<Sheet> sheets = new List<Sheet>();
+{	
+	public List<Sheet> sheets = new List<Sheet> ();
 
 	[System.SerializableAttribute]
 	public class Sheet
@@ -16,10 +16,11 @@ public class Entity_monster : ScriptableObject
 	[System.SerializableAttribute]
 	public class Param
 	{
-
+		
 		public int index;
 		public int hp;
 		public int mp;
 		public string name;
 	}
 }
+

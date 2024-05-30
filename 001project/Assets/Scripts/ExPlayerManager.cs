@@ -9,7 +9,7 @@ public class ExPlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 100; i++)
+        for(int i = 0; i < 100; i++)
         {
             PlayerData playerData = new PlayerData()
             {
@@ -31,6 +31,6 @@ public class ExPlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
