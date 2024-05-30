@@ -1,17 +1,18 @@
+Ôªø
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace STORYGAME
 {
-    [CreateAssetMenu(fileName = "NewStory" , menuName = "ScriptableObjects/StoryTableObject")]
+    [CreateAssetMenu(fileName = "NewStory", menuName = "ScriptableObjects/StoryTableObject")]
     public class StoryTableObject : ScriptableObject
     {
         public int storyNumber;
         public Enums.StoryType storyType;
         public bool storyDone;
 
-        [TextArea(10, 10)] //¿ŒΩ∫∆Â≈Õ text øµø™ º≥¡§
+        [TextArea(10, 10)]
         public string storyText;
         public List<Option> options = new List<Option>();
 
@@ -41,4 +42,3 @@ namespace STORYGAME
         }
     }
 }
-

@@ -57,4 +57,3 @@ namespace STORYGAME
         public int charisma;        //CHA ¸Å·Â 
     }
 }
-

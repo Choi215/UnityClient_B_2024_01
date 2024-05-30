@@ -13,7 +13,7 @@ public class Item
     public int Index
     {
         get { return index; }
-       
+
     }
 
     public string Name
@@ -64,7 +64,7 @@ public class Inventory
     }
     public int InventoryCount
     {
-        get {return items.Length;}
+        get { return items.Length; }
     }
     //현재 인벤토리에 있는 아이템 수
     public int ItemCount
@@ -72,18 +72,18 @@ public class Inventory
         get
         {
             int count = 0;
-            foreach(Item item in items) 
+            foreach (Item item in items)
             {
-                if(item != null)
+                if (item != null)
                     count++;
             }
             return count;
-        }        
+        }
     }
     //아이템 추가
     public bool AddItem(Item item)
     {
-        for(int i = 0; i < items.Length; i++) 
+        for (int i = 0; i < items.Length; i++)
         {
             if (items[i] == null)
             {
@@ -94,7 +94,7 @@ public class Inventory
         return false;   //인벤토리에 빈칸이 없는 겨우
     }
     //아이템 제거
-    public void RemoveItem(Item item) 
+    public void RemoveItem(Item item)
     {
         for (int i = 0; i < items.Length; i++)
         {
@@ -145,7 +145,7 @@ public class ExGameSystem : MonoBehaviour
     private string GetInventoryAsString()
     {
         string result = "";
-        for(int i = 0; i < inventory.InventoryCount; i++) 
+        for (int i = 0; i < inventory.InventoryCount; i++)
         {
             if (inventory[i] != null)
             {
